@@ -35,7 +35,7 @@ body{
     z-index: 1;
     transition: .6s ease-in-out 1.2s, visibility 0s 1s;
 }
-.container.active.form-box{
+.container.active .form-box{
     right: 50%;
 }
 .form-box.register {
@@ -45,7 +45,7 @@ body{
 .container.active .form-box.register{
     visibility: visible;
 }
-form{
+form {
     width: 100%;
 }
 .container h1{
@@ -126,7 +126,7 @@ form{
    
 }
 
-.toggle-box::before{
+.toggle-box::before {
     content: '';
     position: absolute;
     left: -250%;
@@ -135,7 +135,7 @@ form{
     background: #7494ec;
     border-radius: 150px;
     z-index: 2;
-    transition: 1.5s ease-in-out;
+    transition: 1.8s ease-in-out;
 }
 
 .container.active .toggle-box::before {
