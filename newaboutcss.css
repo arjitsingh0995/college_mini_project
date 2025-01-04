@@ -1,0 +1,75 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  .min-h-screen {
+    min-height: 100vh;
+  }
+  .bg-blue-600 {
+    background: linear-gradient(135deg, #4158d0, #c850c0);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+  }
+  .text-white {
+    color: white;
+  }
+  .bg-image {
+    background-image: url('https://images.unsplash.com/photo-1541339907198-e08756dedf3f');
+    opacity: 0.1;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+  }
+  .text-center {
+    text-align: center;
+  }
+  .text-xl {
+    font-size: 1.25rem;
+  }
+  .text-3xl {
+    font-size: 2rem;
+  }
+  .font-bold {
+    font-weight: bold;
+  }
+  .grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+  .feature, .team-member {
+    background: white;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    text-align: center;
+  }
+  .feature-icon {
+    font-size: 2rem;
+  }
+  .avatar {
+    background: #2563eb;
+    color: white;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    border-radius: 50%;
+  }
+  .btn {
+    background: white;
+    color: #2563eb;
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    border: none;
+    cursor:pointer;
+  }
+.space-y-6{
+     text-align: center;
+}
+.text-xl max-w-2xl mx-auto text-blue-100{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  
+}

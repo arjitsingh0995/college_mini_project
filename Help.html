@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f0f2f5;
+            color: #1a1a1a;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #4158d0, #c850c0);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .help-container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .search-bar {
+            background: white;
+            padding: 1rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+        }
+
+        .search-bar input {
+            width: 100%;
+            padding: 0.8rem;
+            border: 2px solid #e1e1e1;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        .help-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .help-card {
+            background: white;
+            border-radius: 10px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        .help-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .help-card h3 {
+            color: #4158d0;
+            margin-bottom: 1rem;
+        }
+
+        .help-content {
+            display: none;
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid #e1e1e1;
+        }
+
+        .help-content.active {
+            display: block;
+        }
+
+        .step {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+        }
+
+        .step-number {
+            background: #4158d0;
+            color: white;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1rem;
+            flex-shrink: 0;
+        }
+
+        .quick-actions {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .action-button {
+            background: #4158d0;
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .action-button:hover {
+            background: #3448a5;
+        }
+
+        @media (max-width: 768px) {
+            .help-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>FindIt Help Center</h1>
+        <p>Quick guides to find or report lost items on campus</p>
+    </header>
+
+    <main class="help-container">
+        <div class="search-bar">
+            <input type="text" placeholder="Search for help topics..." id="searchInput">
+        </div>
+
+        <div class="help-grid">
+            <div class="help-card">
+                <h3>🔍 How to Search for Lost Items</h3>
+                <p>Find items that others have reported as found</p>
+                <div class="help-content">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div>Click the "Search Items" button on the homepage</div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div>Use filters to narrow down by category, location, and date</div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div>Browse through matching items and click for details</div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <div>Contact the finder through the built-in messaging system</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="help-card">
+                <h3>📝 How to Report a Lost Item</h3>
+                <p>Let others know what you've lost</p>
+                <div class="help-content">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div>Click "Report Lost Item" in the navigation menu</div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div>Fill out the item description form with details</div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div>Add photos if available and last known location</div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <div>Submit and wait for notifications of potential matches</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="help-card">
+                <h3>📸 How to Report Found Items</h3>
+                <p>Help return items to their owners</p>
+                <div class="help-content">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div>Select "I Found Something" on the homepage</div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div>Take clear photos and provide detailed description</div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div>Specify where and when you found the item</div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <div>Choose a secure handover location on campus</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="quick-actions">
+            <a href="Home2.html"><button class="action-button">Back to Home</button></a>
+
+        </div>
+    </main>
+
+    <script>
+        // Toggle help content visibility
+        document.querySelectorAll('.help-card').forEach(card => {
+            card.addEventListener('click', () => {
+                const content = card.querySelector('.help-content');
+                content.classList.toggle('active');
+            });
+        });
+
+        // Search functionality
+        const searchInput = document.getElementById('searchInput');
+        searchInput.addEventListener('input', (e) => {
+            const searchTerm = e.target.value.toLowerCase();
+            document.querySelectorAll('.help-card').forEach(card => {
+                const text = card.textContent.toLowerCase();
+                card.style.display = text.includes(searchTerm) ? 'block' : 'none';
+            });
+        });
+    </script>
+</body>
+</html>
